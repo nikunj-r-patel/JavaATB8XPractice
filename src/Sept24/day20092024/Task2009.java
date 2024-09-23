@@ -1,5 +1,7 @@
 package Sept24.day20092024;
 
+import java.util.Scanner;
+
 public class Task2009 {
     public static void main(String[] args) {
 //  By using Ternary Operators max between 3 numbers.
@@ -37,5 +39,62 @@ public class Task2009 {
                 }
             }
         }
+        // Triangle Classifier Task
+        System.out.println("Triangle Classifier:");
+        classifyTriangle();
+
+        // FizzBuzz Task
+        System.out.println("\nFizzBuzz Test:");
+        fizzBuzz();
+
+        // Leap Year Task (for 2024)
+        System.out.println("\nLeap Year Check for 2024:");
+        checkLeapYear(2024);
     }
+    // Triangle Classifier
+    public static void classifyTriangle() {
+        Scanner sc = new Scanner(System.in);
+
+        // Input side lengths
+        System.out.print("Enter side 1: ");
+        int side1 = sc.nextInt();
+        System.out.print("Enter side 2: ");
+        int side2 = sc.nextInt();
+        System.out.print("Enter side 3: ");
+        int side3 = sc.nextInt();
+
+        // Classify the triangle
+        if (side1 == side2 && side2 == side3) {
+            System.out.println("The triangle is Equilateral.");
+        } else if (side1 == side2 || side1 == side3 || side2 == side3) {
+            System.out.println("The triangle is Isosceles.");
+        } else {
+            System.out.println("The triangle is Scalene.");
+        }
+    }
+
+    // FizzBuzz Test
+    public static void fizzBuzz() {
+        for (int i = 1; i <= 100; i++) {
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            } else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            } else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            } else {
+                System.out.println(i);
+            }
+        }
+    }
+
+    // Leap Year Program
+    public static void checkLeapYear(int year) {
+        if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+            System.out.println(year + " is a leap year.");
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+    }
+
 }
