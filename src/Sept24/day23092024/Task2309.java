@@ -81,7 +81,7 @@ public static void simpleCalculator(Scanner scanner) {
             case 10 -> System.out.println("Oct");
             case 11 -> System.out.println("Nov");
             case 12 -> System.out.println("Dec");
-            default -> System.out.println("A be earth pe  1 to 12 mahi ne hi he t okonse gole se aaya he ?.");
+            default -> System.out.println("A be earth pe  1 to 12 mahine hi he tu konse gole se aaya he ?.");
         }
     }
 
